@@ -3,6 +3,7 @@
 */
 /* can't init just yet */
 console.error("cannot init doc")
+document.getElementById('code').InnerHtml = cannot init doc;
 var docURL = window.location.href,
   params = [];
 

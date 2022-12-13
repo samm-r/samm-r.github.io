@@ -1,9 +1,6 @@
 /* URL in address bar: 
    http://localhost/test/js-url-parameters/#/str1/str2/str3/
 */
-/* can't init just yet */
-console.error("cannot init doc")
-document.getElementById('code').InnerHtml = cannot init doc;
 var docURL = window.location.href,
   params = [];
 

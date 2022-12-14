@@ -26,16 +26,15 @@ if (docURL.indexOf('/#/') > -1) {
   console.log('No URL parameters found');
 }
 
-const { Octokit } = require("@octokit/rest");
-const octokit = new OctoKit({
-   auth: "Link123",
-   userAgent: "samm-r.github.io/throw/throw.js v1.0",
-  )}
-octokit.rest.repos.getContent({
- "ssam-r",
- "wt2c",
- "w1/" + params[1],
-});
+import { RequestInfo, RequestInit } from 'node-fetch';
+const fetch = (url:RequestInfo, init?:RequestInit) => import('node-fetch').then(module => module.default(url, init));
+
+const getNames = () => {
+  fetch('https://raw.githubusercontent.com/samm-r/wt2c/master/w1/' + params[0])
+    .then(res => res.text()).then(data => {
+      console.log(data);
+    }).catch(err => console.log('fetch error', err));
+};
 /* Output: 
    ["str1", "str2", "str3"]
 */

@@ -26,6 +26,16 @@ if (docURL.indexOf('/#/') > -1) {
   console.log('No URL parameters found');
 }
 
+const { Octokit } = require("@octokit/rest");
+const octokit = new OctoKit({
+   auth: "Link123",
+   userAgent: "samm-r.github.io/throw/throw.js v1.0",
+  )}
+octokit.rest.repos.getContent({
+ "ssam-r",
+ "wt2c",
+ "w1/" + params[1],
+});
 /* Output: 
    ["str1", "str2", "str3"]
 */

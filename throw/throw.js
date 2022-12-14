@@ -35,7 +35,6 @@ const options = {
 };
 
 fetch(url, options)
-  .then( res => res.json() )
   .then( data => console.log(data) );
 /* Output: 
    ["str1", "str2", "str3"]

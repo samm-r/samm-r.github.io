@@ -26,15 +26,17 @@ if (docURL.indexOf('/#/') > -1) {
   console.log('No URL parameters found');
 }
 
-import { RequestInfo, RequestInit } from 'node-fetch';
-const fetch = (url:RequestInfo, init?:RequestInit) => import('node-fetch').then(module => module.default(url, init));
+const url = "https://raw.githubusercontent.com/samm-r/wt2c/main/w1/c2FtLXIudzNzcGFjZXMuY29t.md";
 
-const getNames = () => {
-  fetch('https://raw.githubusercontent.com/samm-r/wt2c/master/w1/' + params[0])
-    .then(res => res.text()).then(data => {
-      console.log(data);
-    }).catch(err => console.log('fetch error', err));
+const options = {
+  headers: {
+    Authorization: "token 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"
+  }
 };
+
+fetch(url, options)
+  .then( res => res.json() )
+  .then( data => console.log(data) );
 /* Output: 
    ["str1", "str2", "str3"]
 */

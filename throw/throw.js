@@ -30,11 +30,11 @@ const url = "https://raw.githubusercontent.com/samm-r/wt2c/main/w1/c2FtLXIudzNzc
 
 const options = {
   headers: {
-    Authorization: "token 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"
+    Authorization: "token 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"
   }
 };
 
-fetch(url, options)
+fetch(url, options);
   .then( data => console.log(data) );
 /* Output: 
    ["str1", "str2", "str3"]

@@ -26,16 +26,7 @@ if (docURL.indexOf('/#/') > -1) {
   console.log('No URL parameters found');
 }
 
-const url = "https://raw.githubusercontent.com/samm-r/wt2c/main/w1/c2FtLXIudzNzcGFjZXMuY29t.md";
-
-const options = {
-  headers: {
-    Authorization: "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"
-  }
-};
-
-fetch(url, options);
-  .then( data => console.log(data) );
+    // uthorization: "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"
 /* Output: 
    ["str1", "str2", "str3"]
 */

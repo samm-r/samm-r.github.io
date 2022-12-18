@@ -1,12 +1,31 @@
-<!DOCTYPE html>
 <html>
-<head>
-  <script src="throw.js"></script>
-  <title>wt2c</title>
-  </head>
-  <body>
-    <code id="code">processing arg</code><br>
-    <code>check <mark>console</mark> for errors</code>
-    <noscript>wt2c requires JavaScript.</noscript>
-  </body>
-  <html>
+    <head>
+        <title>wt2c</title>
+        <style>
+            .notif {
+                font-family: Arial, Helvetica, sans-serif;
+                font-size:small;
+            }
+            mark {
+                background-color:orange;
+                border-radius: 5px;
+                padding-left:3px;
+                padding-right:3px;
+            }
+            small {
+                font-family: Arial;
+            }
+            p {
+                line-height:0;
+            }
+        </style>
+    </head>
+    <body>
+        <noscript>wt2c requirs JavaScript in order to run.</noscript>
+        <code id="main">processing args</code>
+        <p class="notif">check <mark>console</mark> for any errors.</p>
+        <small>sammm-r.github.io/throw/#/</small><small id="small"></small>
+        <script src="throw.js"></script>
+    </body>
+
+</html>

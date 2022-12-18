@@ -12,6 +12,9 @@ if (docURL.indexOf('/#/') > -1) {
 
     params = docURL.split('/');
     console.log(params);
+    document.getElementById("main").innerHTML = "params found, loading...";
+    fetch('https://samm-r.github.io/catch/catch.js')
+.then(res => { return res.text()}).then(text => {document.getElementById("load").innerHTML = (text)})
   }
 } else {
     document.getElementById("main").innerHTML= "no params found";

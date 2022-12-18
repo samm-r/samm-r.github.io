@@ -8,6 +8,7 @@ wt2c aims to reduce storage taken up by handful of documents and instead display
 `throw: WIP`
 `catch: -id`
 
+**wt2c is a WIP. It is not fully functional yet!!**
 * * *
 
 Copyright © Sam R 2022

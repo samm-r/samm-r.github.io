@@ -14,11 +14,6 @@ if (docURL.indexOf('/#/') > -1) {
     console.log(params);
     document.getElementById("main").innerHTML = "params found, loading...";
     document.getElementById("small").innerHTML = params;
-    console.err("cant fetch yet!")
-    /*
-    fetch('https://samm-r.github.io/catch/catch.js')
-.then(res => { return res.text()}).then(text => {document.getElementById("load").innerHTML = (text)})
-    */
   }
 } else {
     document.getElementById("main").innerHTML= "no params found";

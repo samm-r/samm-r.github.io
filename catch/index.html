@@ -29,6 +29,7 @@
         </div>
         <p id="load"></p>
         <script type="module">
+           
             var docURL = window.location.href,
   params = [];     
 docURL = docURL.replace(window.location.origin, '');
@@ -53,15 +54,16 @@ if (docURL.indexOf('/#/') > -1) {
 
             import { Octokit, App } from "https://cdn.skypack.dev/octokit";
             const octokit = new Octokit({
-  auth: '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' // readonly key dont get too shabby
+  auth: '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'
 })
 const small = document.getElementById('small').InnerHTML;
 const result = await octokit.request('GET /repos/{owner}/{repo}/contents/{path}{?ref}', {
   owner: 'samm-r',
   repo: 'wt2c',
-  path: 'c2FtLXIudzNzcGFjZXMuY29tc2FtLXIudzNzcGFjZXMuY29t.txt'
+  path: 'c2FtLXIudzNzcGFjZXMuY29t.txt'
 })
 document.getElementById('load').innerHTML = result.data['content'];
+            
             </script>
     </body>
 

@@ -28,8 +28,29 @@
             <p class="notif">check <mark>console</mark> for any errors.</p>
         </div>
         <p id="load"></p>
-        <script src="catch.js"></script>
         <script type="module">
+            var docURL = window.location.href,
+  params = [];     
+docURL = docURL.replace(window.location.origin, '');
+
+if (docURL.indexOf('/#/') > -1) {
+  docURL = docURL.split('/#/')[1];
+  if (docURL != '') {
+
+    if (docURL[docURL.length - 1] == '/') {
+      docURL = docURL.substring(0, docURL.length - 1);
+    }
+
+    params = docURL.split('/');
+    console.log(params);
+    document.getElementById("main").innerHTML = "params found, loading...";
+    document.getElementById("small").innerHTML = params;
+  }
+} else {
+    document.getElementById("main").innerHTML= "no params found";
+  document.getElementById("small").innerHTML = "_";
+}
+
             import { Octokit, App } from "https://cdn.skypack.dev/octokit";
             const octokit = new Octokit({
   auth: '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'

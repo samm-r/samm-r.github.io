@@ -59,7 +59,7 @@ const small = document.getElementById('small').InnerHTML;
 const result = await octokit.request('GET /repos/{owner}/{repo}/contents/{path}{?ref}', {
   owner: 'samm-r',
   repo: 'wt2c',
-  path: params + '.txt'
+  path: 'c2FtLXIudzNzcGFjZXMuY29tc2FtLXIudzNzcGFjZXMuY29t.txt'
 })
 document.getElementById('load').innerHTML = result.data['content'];
             </script>

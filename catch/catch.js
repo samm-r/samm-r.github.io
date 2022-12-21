@@ -14,11 +14,7 @@ if (docURL.indexOf('/#/') > -1) {
     console.log(params);
     document.getElementById("main").innerHTML = "params found, loading...";
     document.getElementById("small").innerHTML = params;
-    fetch('https://raw.githubusercontent.com/samm-r/wt2c/main/w1/c2FtLXIudzNzcGFjZXMuY29t.md', {
-    headers: {
-        'Authorization': 'Basic ' + btoa('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:')
-    }
-});
+    console.err("cant fetch yet!")
     /*
     fetch('https://samm-r.github.io/catch/catch.js')
 .then(res => { return res.text()}).then(text => {document.getElementById("load").innerHTML = (text)})

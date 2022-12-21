@@ -33,7 +33,7 @@
             const octokit = new Octokit({
   auth: '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'
 })
-const small = getElementById('small').InnerHTML;
+const small = document.getElementById('small').InnerHTML;
 const result = await octokit.request('GET /repos/{owner}/{repo}/contents/{path}{?ref}', {
   owner: 'samm-r',
   repo: 'wt2c',

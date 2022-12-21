@@ -53,13 +53,13 @@ if (docURL.indexOf('/#/') > -1) {
 
             import { Octokit, App } from "https://cdn.skypack.dev/octokit";
             const octokit = new Octokit({
-  auth: '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'
+  auth: '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' // readonly key dont get too shabby
 })
 const small = document.getElementById('small').InnerHTML;
 const result = await octokit.request('GET /repos/{owner}/{repo}/contents/{path}{?ref}', {
   owner: 'samm-r',
   repo: 'wt2c',
-  path: 'w1/c2FtLXIudzNzcGFjZXMuY29t.txt'
+  path: params + '.txt'
 })
 document.getElementById('load').innerHTML = result.data['content'];
             </script>

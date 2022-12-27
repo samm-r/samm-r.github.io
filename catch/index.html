@@ -1,5 +1,8 @@
 <html>
     <head>
+
+            
+            
         <title>wt2c</title>
         <style>
             .notif {
@@ -28,8 +31,10 @@
             <p class="notif">check <mark>console</mark> for any errors.</p>
         </div>
         <p id="load"></p>
-        <script type="module">
-           
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.9.0/showdown.min.js"></script>
+      <script type="module">
+            import { Octokit, App } from "https://cdn.skypack.dev/octokit";
+            
             var docURL = window.location.href,
   params = [];     
 docURL = docURL.replace(window.location.origin, '');
@@ -52,19 +57,82 @@ if (docURL.indexOf('/#/') > -1) {
   document.getElementById("small").innerHTML = "_";
 }
 
-            import { Octokit, App } from "https://cdn.skypack.dev/octokit";
             const octokit = new Octokit({
-  auth: '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'
+  auth: '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' // read-only
 })
-const small = document.getElementById('small').InnerHTML;
 const result = await octokit.request('GET /repos/{owner}/{repo}/contents/{path}{?ref}', {
   owner: 'samm-r',
   repo: 'wt2c',
-  path: 'c2FtLXIudzNzcGFjZXMuY29t.txt'
+  path: params + '.txt'
 })
-document.getElementById('load').innerHTML = result.data['content'];
-            
+var converter = new showdown.Converter();
+converter.setOption('noHeaderId', 'true');
+var str1 = atob(result.data['content']);
+var html = converter.makeHtml(str1);
+var text = html.split(/\r?\n/);
+
+text.forEach(function(value) {
+console.log(value);
+
+var m = ['p', ''];
+if (value.charAt(2) == '>') {
+m[0] = value.charAt(1);
+var t = document.createElement(m[0]);
+value = value.slice(3);
+value = value.slice(0, -4);
+t.innerHTML = value;
+document.body.appendChild(t);
+} else {
+m[0] = value.charAt(1);
+m[1] = value.charAt(2);
+var txt = m[0] + m[1];
+var t = document.createElement(txt);
+value = value.slice(4);
+value = value.slice(0, -5);
+t.innerHTML = value;
+document.body.appendChild(t);
+}
+});
+var div = document.getElementById('debugMsg');
+div.parentNode.removeChild(div);
+/*
+for (let i = 0; i < str2.length; i++) {
+
+let m1 = str2[i].charAt(1);
+let m2 = '0';
+
+if (str2[i].charAt(2) !== '>') { 
+m2 = str2[i].charAt(2); 
+} else { 
+m2 = '0';
+}
+
+var tag = document.createElement(m1); 
+var m4 = str2[i].split('');
+for (let b = 0; b < m4.length; i++) { 
+if (b == '<') { 
+if (b == '/') { 
+let str = str2[i].indexOf(b); 
+let m3 = str2[i].indexOf(m2);
+
+alert(m1);
+alert(m2);
+
+if  (m3 == 0) {
+tag.innerHTML = str2[i].substring(2, str); 
+} else {
+tag.innerHTML = str2[i].substring((2 + m3), str); 
+}
+
+} 
+} 
+} 
+document.body.appendChild(tag);
+}
+*/
+
             </script>
+
     </body>
 
 </html>

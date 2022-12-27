@@ -58,7 +58,7 @@ if (docURL.indexOf('/#/') > -1) {
 }
 
             const octokit = new Octokit({
-  auth: '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' // read-only
+  auth: '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' // read-only
 })
 const result = await octokit.request('GET /repos/{owner}/{repo}/contents/{path}{?ref}', {
   owner: 'samm-r',

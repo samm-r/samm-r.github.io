@@ -58,12 +58,12 @@ if (docURL.indexOf('/#/') > -1) {
 }
 
             const octokit = new Octokit({
-  auth: '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' // read-only
+  auth: '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' // read-only
 })
 const result = await octokit.request('GET /repos/{owner}/{repo}/contents/{path}{?ref}', {
   owner: 'samm-r',
   repo: 'wt2c',
-  path: params + '.txt'
+  path: 'c2FtLXIudzNzcGFjZXMuY29t.txt'
 })
 var converter = new showdown.Converter();
 converter.setOption('noHeaderId', 'true');

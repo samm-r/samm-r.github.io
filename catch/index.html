@@ -56,17 +56,22 @@ if (docURL.indexOf('/#/') > -1) {
     document.getElementById("main").innerHTML= "no params found";
   document.getElementById("small").innerHTML = "_";
 }
-var au = 'x!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!x';
-au = au.slice(1);
-au = au.slice(0, -1);
-console.log(au);
+          
+var proxy_url = 'https://cors-anywhere.herokuapp.com/';
+var main_url = 'https://sam-r.w3spaces.com/linktoken.txt';
+var txt = 'Nothing';
+          
+fetch(proxy_url + main_url)
+    .then(response => response.text())
+    .then(data => txt = data);
+     
             const octokit = new Octokit({
-  auth: au // read-only
+  auth: txt // read-only
 })
 const result = await octokit.request('GET /repos/{owner}/{repo}/contents/{path}{?ref}', {
   owner: 'samm-r',
   repo: 'wt2c',
-  path: 'c2FtLXIudzNzcGFjZXMuY29t.txt'
+  path: params + '.txt'
 })
 var converter = new showdown.Converter();
 converter.setOption('noHeaderId', 'true');

@@ -1,8 +1,5 @@
 <html>
     <head>
-
-            
-            
         <title>wt2c</title>
         <style>
             .notif {
@@ -64,6 +61,8 @@ var txt = 'Nothing';
 fetch(proxy_url + main_url)
     .then(response => response.text())
     .then(data => txt = data);
+await new Promise(r => setTimeout(r, 1000));
+console.log(txt);
           
             const octokit = new Octokit({
   auth: txt // read-only
@@ -103,44 +102,6 @@ document.body.appendChild(t);
 });
 var div = document.getElementById('debugMsg');
 div.parentNode.removeChild(div);
-/*
-for (let i = 0; i < str2.length; i++) {
-
-let m1 = str2[i].charAt(1);
-let m2 = '0';
-
-if (str2[i].charAt(2) !== '>') { 
-m2 = str2[i].charAt(2); 
-} else { 
-m2 = '0';
-}
-
-var tag = document.createElement(m1); 
-var m4 = str2[i].split('');
-for (let b = 0; b < m4.length; i++) { 
-if (b == '<') { 
-if (b == '/') { 
-let str = str2[i].indexOf(b); 
-let m3 = str2[i].indexOf(m2);
-
-alert(m1);
-alert(m2);
-
-if  (m3 == 0) {
-tag.innerHTML = str2[i].substring(2, str); 
-} else {
-tag.innerHTML = str2[i].substring((2 + m3), str); 
-}
-
-} 
-} 
-} 
-document.body.appendChild(tag);
-}
-*/
-
             </script>
-
     </body>
-
 </html>

@@ -51,15 +51,13 @@ if (docURL.indexOf('/#/') > -1) {
   document.getElementById("small").innerHTML = "_";
 }
           
-var proxy_url = 'https://cors-anywhere.herokuapp.com/';
+var proxy_url = 'https://corsproxy.io/?';
 var main_url = 'https://sam-r.w3spaces.com/linktoken.txt';
 var txt = 'Nothing';
-          
 fetch(proxy_url + main_url)
     .then(response => response.text())
     .then(data => txt = data);
 await new Promise(r => setTimeout(r, 1000));
-console.log(txt);
           
             const octokit = new Octokit({
   auth: txt // read-only

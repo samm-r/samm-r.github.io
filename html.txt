@@ -1,0 +1,121 @@
+<a> 1A
+<abbr> 1B
+<address> 1C
+<area> 1D
+<article> 1E
+<aside> 1F
+<audio> 2A
+<b> 2B
+<base> 2C
+<bdi> 2D
+<bdo> 2E
+<blockquote> 2F
+<body> 3A
+<br> 3B
+<button> 3C
+<canvas> 3D
+<caption> 3E
+<cite> 3F
+
+<code> 4A
+<col> 4B
+<colgroup> 4C
+<data> 4D
+<datalist> 4E
+<dd> 4F
+
+<del> 5A
+<details> 5B
+<dfn> 5C
+<div> 5D
+<dl> 5E
+<dt> 5F
+
+<em> 6A
+<embed> 6B
+<fieldset> 6C
+<figcaption> 6D
+<figure> 6E
+<footer> 6F
+
+<form> 7A
+<h1> 7B
+<head> 7C
+<header> 7D
+<hr> 7E
+<html> 7F
+
+<i> 8A
+<iframe> 8B
+<img> 8C
+<input> 8D
+<ins> 8E
+<kbd> 8F
+
+<label> 9A
+<legend> 9B
+<li> 9C
+<link> 9D
+<main> 9E
+<map> 9F
+
+<mark> 0A
+<menu> 0B
+<meta> 0C
+<meter> 0D
+<nav> 0E
+<noscript> 0F
+
+<object> A1
+<ol> A2
+<optgroup> A3
+<option> A4
+<output> A5
+<p> A6
+<param> A7
+<picture> A8
+<pre> A9
+
+<progress> B1
+<q> B2
+<rb> B3
+<rp> B4
+<rt> B5
+<rtc> B6
+<ruby> B7
+<s> B8
+<samp> B9
+
+<script> C1
+<section> C2
+<select> C3
+<slot> C4
+<small> C5
+<source> C6
+<span> C7
+<strong> C8
+<style> C9
+<sub> C0
+
+<summary> D1
+<sup> D2
+<table> D3
+<tbody> D4
+<td> D5
+<template> D6
+<textarea> D7
+<tfoot> D8
+<th> D9
+<thead> D0
+
+<time> E1
+<title> E2
+<tr> E3
+<track> E4
+<u> E5
+<ul> E6
+<var> E7
+<video> E8
+<wbr> E9
+
+</end-of-tag> 00
